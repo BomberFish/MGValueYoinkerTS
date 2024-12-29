@@ -8,7 +8,7 @@ fi
 cd "$(dirname "$0")"
 
 WORKING_LOCATION="$(pwd)"
-APPLICATION_NAME=QuickSign
+APPLICATION_NAME=MGValueYoinkerTS
 PLATFORM=iOS
 SDK=iphoneos
 if [[ $* == *--debug* ]]; then
@@ -81,8 +81,8 @@ if [ -e "$TARGET_APP/embedded.mobileprovision" ]; then
 fi
 
 # Add entitlements
-#echo "[*] Adding entitlements"
-#ldid -S"$WORKING_LOCATION/$APPLICATION_NAME/$APPLICATION_NAME.entitlements" "$TARGET_APP/$APPLICATION_NAME"
+echo "[*] Adding entitlements"
+ldid -S"$WORKING_LOCATION/$APPLICATION_NAME/$APPLICATION_NAME.entitlements" "$TARGET_APP/$APPLICATION_NAME"
 #
 #ldid -S"$WORKING_LOCATION/$APPLICATION_NAME/$APPLICATION_NAME.entitlements" "$TARGET_APP/PlugIns/AmpereIntents.appex/AmpereIntents"
 #
